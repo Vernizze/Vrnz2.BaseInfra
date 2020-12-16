@@ -11,7 +11,7 @@ namespace Vrnz2.BaseInfra.Validations
                     .AddScoped<ValidationHelper>();
 
         public static IServiceCollection AddValidation<TRequest, TResult>(this IServiceCollection services)
-            where TRequest : class, IValidator
+            where TRequest : class
             where TResult : AbstractValidator<TRequest>
         {
             services
