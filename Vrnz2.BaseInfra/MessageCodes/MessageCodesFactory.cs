@@ -9,9 +9,16 @@ namespace Vrnz2.BaseInfra.MessageCodes
 {
     public class MessageCodesFactory
     {
+        #region Constants 
+
+        public const string UNEXPECTED_ERROR = "ERROR_00000";
+
+        #endregion
+
         #region Variables
 
         private static MessageCodesFactory _instance;
+        private static string MessagesFileName { get; set; } = null;
 
         #endregion
 
@@ -44,9 +51,14 @@ namespace Vrnz2.BaseInfra.MessageCodes
 
         private void Init()
         {
+            var messagesFileName = MessagesFileName ?? "messages.json";
+
+            if (!File.Exists(messagesFileName))
+                return;
+
             var culture = Thread.CurrentThread.CurrentCulture;
 
-            var errorMessages = JsonConvert.DeserializeObject<Messages>(File.ReadAllText("error_messages.json"));
+            var errorMessages = JsonConvert.DeserializeObject<Messages>(File.ReadAllText(messagesFileName));
 
             var currentErrorMessage = errorMessages.LocaleMessages.First(e => e.LocaleName.Equals(culture.Name));
 
