@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Vrnz2.BaseContracts.Settings.Base;
 
 namespace Vrnz2.BaseInfra.Settings
@@ -21,7 +22,7 @@ namespace Vrnz2.BaseInfra.Settings
             settings = services
                 .Configure<T>(ConfigurationFactory.Instance.Configuration)
                 .BuildServiceProvider()
-                .GetService<T>();
+                .GetService<IOptions<T>>().Value;
 
             return services;
         }
