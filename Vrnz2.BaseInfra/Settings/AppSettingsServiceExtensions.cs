@@ -14,5 +14,16 @@ namespace Vrnz2.BaseInfra.Settings
             where T : BaseAppSettings
             => services
                 .Configure<T>(ConfigurationFactory.Instance.Configuration);
+
+        public static IServiceCollection AddSettings<T>(this IServiceCollection services, out T settings)
+            where T : BaseAppSettings
+        {
+            settings = services
+                .Configure<T>(ConfigurationFactory.Instance.Configuration)
+                .BuildServiceProvider()
+                .GetService<T>();
+
+            return services;
+        }
     }
 }
