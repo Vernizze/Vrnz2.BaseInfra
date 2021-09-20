@@ -29,7 +29,7 @@ namespace Vrnz2.BaseInfra.Validations
 
         #region Methods
 
-        public (bool IsValid, List<string> ErrorCodes) Validate<T>(T request)
+        public (bool IsValid, List<string> ErrorCodes) Validate<T>(T request, bool ignoreMessageCodesFactory = false)
             where T : BaseDTO.Request
         {
             try
@@ -43,7 +43,10 @@ namespace Vrnz2.BaseInfra.Validations
 
                 var validationResult = validator.Validate(context);
 
-                return (validationResult.IsValid, validationResult.Errors.Select(e => MessageCodesFactory.Instance.GetMessage(e.ErrorMessage)).ToList());
+                if (ignoreMessageCodesFactory)
+                    return (validationResult.IsValid, validationResult.Errors.Select(e => e.ErrorMessage).ToList());
+                else
+                    return (validationResult.IsValid, validationResult.Errors.Select(e => MessageCodesFactory.Instance.GetMessage(e.ErrorMessage)).ToList());
             }
             catch (System.Exception ex)
             {
