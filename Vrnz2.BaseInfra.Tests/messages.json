@@ -1,0 +1,38 @@
+﻿{
+  "LocaleMessages": [
+    {
+      "LocaleName": "pt-BR",
+      "Messages": [
+        {
+          "Code": "Message01",
+          "Content": "Não encontrado!"
+        },
+        {
+          "Code": "Message02",
+          "Content": "Sucesso!"
+        },
+        {
+          "Code": "Message03",
+          "Content": "Cadastro já existente!"
+        }
+      ]
+    },
+    {
+      "LocaleName": "en-US",
+      "Messages": [
+        {
+          "Code": "Message01",
+          "Content": "Not Found!"
+        },
+        {
+          "Code": "Message02",
+          "Content": "Success!"
+        },
+        {
+          "Code": "Message03",
+          "Content": "Register already exists!"
+        }
+      ]
+    }
+  ]
+}

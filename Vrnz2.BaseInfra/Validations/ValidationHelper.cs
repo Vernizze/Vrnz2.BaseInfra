@@ -1,14 +1,15 @@
-﻿using FluentValidation;
+﻿using Vrnz2.BaseContracts.DTOs.Base;
+using Vrnz2.BaseInfra.MessageCodes;
+using Vrnz2.Infra.CrossCutting.Extensions;
+using FluentValidation;
 using Serilog;
 using System.Collections.Generic;
 using System.Linq;
-using Vrnz2.BaseContracts.DTOs.Base;
-using Vrnz2.BaseInfra.MessageCodes;
-using Vrnz2.Infra.CrossCutting.Extensions;
 
 namespace Vrnz2.BaseInfra.Validations
 {
     public class ValidationHelper
+        : IValidationHelper
     {
         #region Variables
 

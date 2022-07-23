@@ -8,6 +8,7 @@ namespace Vrnz2.BaseInfra.Validations
         public static IServiceCollection AddBaseValidations(this IServiceCollection services)
             => services
                     .AddScoped<IValidatorFactory, ValidatorFactory>()
+                    .AddScoped<IValidationHelper, ValidationHelper>()
                     .AddScoped<ValidationHelper>();
 
         public static IServiceCollection AddValidation<TRequest, TResult>(this IServiceCollection services)

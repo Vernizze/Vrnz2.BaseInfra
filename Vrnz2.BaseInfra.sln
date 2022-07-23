@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrnz2.BaseInfra", "Vrnz2.BaseInfra\Vrnz2.BaseInfra.csproj", "{CC29220F-CAF2-413B-AD75-EB28CBD19388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.BaseInfra", "Vrnz2.BaseInfra\Vrnz2.BaseInfra.csproj", "{CC29220F-CAF2-413B-AD75-EB28CBD19388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrnz2.BaseInfra.Tests", "Vrnz2.BaseInfra.Tests\Vrnz2.BaseInfra.Tests.csproj", "{C34F1660-D06A-4881-876B-E1E5C9CBCF80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CC29220F-CAF2-413B-AD75-EB28CBD19388}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC29220F-CAF2-413B-AD75-EB28CBD19388}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC29220F-CAF2-413B-AD75-EB28CBD19388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34F1660-D06A-4881-876B-E1E5C9CBCF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34F1660-D06A-4881-876B-E1E5C9CBCF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34F1660-D06A-4881-876B-E1E5C9CBCF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34F1660-D06A-4881-876B-E1E5C9CBCF80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
